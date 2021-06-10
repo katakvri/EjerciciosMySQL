@@ -1,0 +1,25 @@
+CREATE TABLE PIEZAS (
+Codigo INT,
+Nombre NVARCHAR(100),
+PRIMARY KEY(Codigo)
+);
+
+CREATE TABLE PROVEEDORES (
+Id CHAR(4),
+Nombre NVARCHAR(100),
+PRIMARY KEY (Id)
+);
+
+CREATE TABLE SUMINISTRA (
+CodigoPieza INT,
+IdProveedor CHAR(4),
+Precio INT,
+PRIMARY KEY(CodigoPieza),
+FOREIGN KEY(IdProveedor) REFERENCES PROVEEDORES(Id)	
+);
+
+
+
+
+
+	

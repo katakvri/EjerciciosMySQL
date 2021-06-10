@@ -1,0 +1,28 @@
+CREATE TABLE CIENTIFICOS (
+DNI VARCHAR(8),
+NomApels NVARCHAR(255),
+PRIMARY KEY(DNI)
+);
+
+CREATE TABLE PROYECTO (
+Id CHAR(4),
+Nombre NVARCHAR(255),
+Horas INT,
+PRIMARY KEY(Id)
+);
+
+CREATE TABLE ASIGNADO_A (
+Cientifico VARCHAR(8),
+Proyecto CHAR(4),
+PRIMARY KEY(Cientifico),
+FOREIGN KEY(Proyecto) REFERENCES PROYECTO(Id)
+);
+
+
+INSERT INTO cientificos VALUES 
+('0980987J', 'Julio Vergas'),
+('7615237K', 'Don Omar'),
+('1415124U', 'Benito Camelo'),
+('4123123T', 'Ana Lisa Melano');
+
+
